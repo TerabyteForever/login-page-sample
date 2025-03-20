@@ -1,0 +1,57 @@
+<!--
+    A sample login page frontend example.
+
+    Copyright (c) 2025 - Terabyte Forever <terabyteforever1@gmail.com>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in - SpaceNet</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Log in</h1>
+            <div class="login-table">
+                <form id="username" class="table-element username-password-table">
+                    <label for="username-input" alt="Username Input">Username:</label>
+                    <input id="username-input" type="text">
+                    <!--
+                    Looking at the Chrome DevTools issue comments have had me understood
+                    what is going on behind the for statement in the label tag.
+                    
+                    Do not underestimate the issues tab!
+                    -->
+                </form>
+                <form id="password" class="table-element username-password-table">
+                    <label for="password-input" alt="Password Input">Password:</label>
+                    <input id="password-input" type="password">
+                </form>
+                <form id="show-password" class="table-element">
+                    <input id="toggle-password" name="toggle-password" type="checkbox" onchange="onRadioChange()">
+                    <label for="toggle-password">Show password</label>
+                </form>
+            </div>
+            <div class="actuators">
+                <button id="login-button">Log in</button>
+                <button id="signup-button">Sign Up</button>
+            </div>
+            <div class="other-methods">
+                <p>Log in with:</p>
+                <div class="signin-buttons">
+                    <button name="google-login" alt="Login with Google account">
+                        <img src="images/google-icon.svg">
+                    </button>
+                    <button name="outlook-login" alt="Login with Microsoft OutLook or Hotmail account">
+                        <img src="images/outlook-icon.svg">
+                    </button>
+                </div>
+            </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/*
+    A sample login page frontend example.
+
+    Copyright (c) 2025 - Terabyte Forever <terabyteforever1@gmail.com>
+*/
+* {
+    font-family:'Segoe UI', Helvetica, Tahoma, Geneva, Arial, Verdana, sans-serif;
+}
+body{
+    display:flex;
+    justify-content: center;
+}
+.container{
+    border: 1px solid gray;
+    align-items: center;
+    position: absolute;
+    top:20%;
+    /*
+        The position CSS property sets how an element is positioned in the document.
+        The top, right, bottom and left properties determine the final location of the 
+        positioned elements.
+
+        static: The element is automatically positioned by the web browser. top, right, etc have
+        no effect.
+
+        relative: Same as static, offset is only given by the top, right, etc.
+
+        absolute: You have to manually place the element by using the absolute positioning.
+
+        fixed: Fixes itself on the viewport. Can be used to scroll the dark mode toggle button or
+        contact us button.
+
+        sticky: Sticks to the nearest ancestor that has a scrolling mechanism, i.e., sticks to the
+        scrolling window. Can be used in blogs to warn user about a deprecated feature.
+
+       ** RELATABLE CONTENT: z-index CSS property.
+        It defines the element's z-axis property with the given integer value.
+    */
+}
+.container *{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.table-element{
+   flex-direction: row;
+}
+.username-password-table{
+    display:table;
+    margin-bottom: 10px;
+}
+.username-password-table *{
+    display:table-cell;
+    margin: 10px 10px;
+}
+.username-password-table label{
+    width: 100%;
+}
+.actuators{
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+@media screen and (max-width: 650px){
+    .actuators{
+        display:flex;
+        justify-content:center;
+        flex-direction: column; 
+    }
+    .actuators *{
+        margin-top: 10px;
+    }
+}
+.actuators *{
+    padding: 10px 35px;
+    font-weight: bolder;
+    border: 1px solid gray;
+    border-radius: 30px;
+}
+.login-table{
+    padding: 20px 30px;
+    display: table;
+}
+.other-methods{
+    padding: 10px 20px;
+}
+.signin-buttons{
+    flex-direction: row;
+}
+.signin-buttons button{
+    background-color: transparent;
+    border: 0px;
+    margin-right:10px;
+}
+#login-button{
+    background-color: orange;
+    border: 1px solid rgb(194, 126, 0);
+}
+/*
+    CSS Pseudo-classes define various events and change the element styling according to that very event.
+    We'll see what happens when we hover on the Log in button.
+*/
+#login-button:hover{
+    background-color: rgb(194, 126, 0);
+    border: 1px solid orange;
+}
+#signup-button:hover{
+    background-color: gray;
+}
